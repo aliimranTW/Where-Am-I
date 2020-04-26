@@ -43,7 +43,7 @@ void process_image_callback(const sensor_msgs::Image img)
     }
     ROS_INFO("left front right %d %d %d", left_col, front_col, right_col);
 
-    while(left_col > 1 || right_col > 1 || front_col > 1)
+    if(left_col > 1 || right_col > 1 || front_col > 1)
     {
         // the location having containing the maximum amout of white pixels indicate the presence of the white ball
         if(left_col > front_col && left_col > right_col)
@@ -57,7 +57,8 @@ void process_image_callback(const sensor_msgs::Image img)
         else
             drive_robot(0.0, 0.0);
     }
-    drive_robot(0.0, 0.0); 
+    else
+        drive_robot(0.0, 0.0); 
 
 }
 
