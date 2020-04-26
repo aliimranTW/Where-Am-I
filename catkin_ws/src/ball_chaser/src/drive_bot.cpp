@@ -14,7 +14,7 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request& req, ball_chaser:
     
     motor_command_publisher.publish(motor_command);
     
-    ros::Duration(2).sleep();
+    //ros::Duration(2).sleep();
     
     res.msg_feedback = "Joint velocities set";
 }
