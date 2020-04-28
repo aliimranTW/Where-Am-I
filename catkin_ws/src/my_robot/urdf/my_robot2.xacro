@@ -27,40 +27,40 @@
     <collision name="collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <box size=".4 .2 .1" />
+        <box size=".6 .4 .1" />
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <box size=".4 .2 .1" />
+        <box size=".6 .4 .1" />
       </geometry>
     </visual>
 
    <collision name="back_caster_collision">
-      <origin xyz="-0.1 0 -0.05" rpy="0 0 0" />
+      <origin xyz="-0.2 0 -0.05" rpy="0 0 0" />
       <geometry>
         <sphere radius="0.0499" />
       </geometry>
     </collision>
 
    <visual name="back_caster_visual">
-      <origin xyz="-0.1 0 -0.05" rpy="0 0 0" />
+      <origin xyz="-0.2 0 -0.05" rpy="0 0 0" />
       <geometry>
         <sphere radius="0.0499" />
       </geometry>
     </visual>
 
    <collision name="front_caster_collision">
-      <origin xyz="0.1 0 -0.05" rpy="0 0 0" />
+      <origin xyz="0.2 0 -0.05" rpy="0 0 0" />
       <geometry>
         <sphere radius="0.0499" />
       </geometry>
     </collision>
 
    <visual name="front_caster_visual">
-      <origin xyz="0.1 0 -0.05" rpy="0 0 0" />
+      <origin xyz="0.2 0 -0.05" rpy="0 0 0" />
       <geometry>
         <sphere radius="0.0499" />
       </geometry>
@@ -120,7 +120,7 @@
     <pose>0 0 0.1 0 0 0</pose>
 
     <inertial>
-      <mass value="1.0"/>
+      <mass value="2.0"/>
       <origin xyz="0.0 0 0" rpy="0 0 0" />
       <inertia
         ixx="0.1" ixy="0" ixz="0"
@@ -145,7 +145,7 @@
   </link>
 
   <joint type="fixed" name="lf_u_support">
-      <origin xyz="0.15 0 0.05" rpy="0 0 0" />
+      <origin xyz="0.25 0 0.05" rpy="0 0 0" />
       <child link="upper_chassis" />
       <parent link="chassis" />
       <axis xyz="0 1 0" rpy="0 0 0" />
@@ -204,7 +204,7 @@
       </collision>
   </link>
   <joint type="continuous" name="left_wheel_hinge">
-      <origin xyz="0 0.15 0" rpy="0 0 0" />
+      <origin xyz="0 0.25 0" rpy="0 0 0" />
       <child link="left_wheel" />
       <parent link="chassis" />
       <axis xyz="0 1 0" rpy="0 0 0" />
@@ -213,7 +213,7 @@
   </joint>
   
   <joint type="continuous" name="right_wheel_hinge">
-      <origin xyz="0 -0.15 0" rpy="0 0 0" />
+      <origin xyz="0 -0.25 0" rpy="0 0 0" />
       <child link="right_wheel" />
       <parent link="chassis" />
       <axis xyz="0 1 0" rpy="0 0 0" />
@@ -222,14 +222,14 @@
   </joint>
   
   <joint type="fixed" name="camera_joint">
-      <origin xyz="0.2 0 0" rpy="0 0 0" />
+      <origin xyz="0.3 0 0" rpy="0 0 0" />
       <child link="camera" />
       <parent link="chassis" />
       <axis xyz="0 1 0" rpy="0 0 0" />
   </joint>
   
   <joint type="fixed" name="hokuyo_joint">
-      <origin xyz="0.15 0 0.1" rpy="0 0 0" />
+      <origin xyz="0.25 0 0.1" rpy="0 0 0" />
       <child link="hokuyo" />
       <parent link="chassis" />
       <axis xyz="0 1 0" rpy="0 0 0" />
