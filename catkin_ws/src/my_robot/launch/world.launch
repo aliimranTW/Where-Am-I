@@ -24,8 +24,6 @@
     <arg name="world_name" value="$(arg world_file)" />
   </include>
 
-  <!--find my robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/my_robot.xacro'" />
 
 <!-- Find my robot Description-->
   <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/my_robot.xacro'"/>
@@ -37,7 +35,7 @@
             -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
 
-  <node name="rviz" pkg="rviz" type="rviz" respawn="false" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_robot)/rviz/config_file.rviz" />
 
 
 </launch>
