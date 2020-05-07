@@ -4,5 +4,5 @@ This project is a part of the Udacity's "Robotics Software Nano-degree" program.
 
 Following are the main objectives: 
 1. Understanding and creating a urdf file for a 2-wheel differential drive robot. Understand how a Gazebo model is interfaced with a simulation through Gazebo plugins. 
-2. Creating ROS nodes. Define publishers and subscribers. Write ROS services for specific tasks.
+2. Creating ROS nodes. Define publishers and subscribers. Write ROS service for driving the robot when a white ball is detected.
 3. Learning how to include multiple sensors and analyze the data in RViz. 
