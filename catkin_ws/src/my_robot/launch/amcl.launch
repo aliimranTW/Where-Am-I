@@ -1,6 +1,6 @@
 <launch>
 
-	<arg name="map_file" default="$(find my_robot)/maps/map1.yaml" />
+	<arg name="map_file" default="$(find my_robot)/maps/map.yaml" />
 	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
 	<node name="amcl" pkg="amcl" type="amcl" output="screen">
@@ -9,8 +9,8 @@
 		<param name="base_frame_id" value="robot_footprint" />
 		<param name= "global_frame_id" value="map" />
 
-		<param name="initial_pose_x" value="1" />
-		<param name="initial_pose_y" value="-6" />
+		<param name="initial_pose_x" value="-6.02" />
+		<param name="initial_pose_y" value="-1.042" />
 	</node>
 
 	<node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
