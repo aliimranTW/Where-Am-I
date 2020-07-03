@@ -9,3 +9,4 @@ cd catkin_ws
 source devel/setup.bash
 roslaunch my_robot amcl.launch
 ```
+This should open a custom gazebo world with a robot deployed in it. The robot is a 2-wheel differential drive robot. It should also open an RVIZ window where the proper operation can be visualzied with all the parameters shown. 
